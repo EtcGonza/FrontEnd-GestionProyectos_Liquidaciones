@@ -1,5 +1,7 @@
 {
   "name": "gestionProyect_Liquid",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
