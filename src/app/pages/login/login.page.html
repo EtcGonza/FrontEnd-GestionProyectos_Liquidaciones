@@ -1,0 +1,52 @@
+<ion-content>
+    <ion-grid fullscreen>
+
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="4" class="contenedor-card">
+
+                <ion-card>
+                    <ion-row class="ion-justify-content-center ion-text-center">
+                        <ion-thumbnail class="ion-padding ion-margin">
+                            <img class="icono-user" src="../../assets/icon/woman.svg" alt="woman-icon">
+                        </ion-thumbnail>
+                    </ion-row>
+
+                    <ion-card-header>
+                        <ion-card-title class="ion-text-center">Login</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <form [formGroup]="formulario">
+                            <ion-row class="ion-justify-content-center ion-padding">
+                                <ion-item>
+                                    <ion-label position="floating">Usuario</ion-label>
+                                    <ion-input formControlName="usuario" type="text"></ion-input>
+                                </ion-item>
+                            </ion-row>
+
+                            <ion-row class="ion-justify-content-center">
+                                <ion-item>
+                                    <ion-label position="floating">Contraseña</ion-label>
+                                    <ion-input formControlName="contrasenia" type="password"></ion-input>
+                                </ion-item>
+                            </ion-row>
+                        </form>
+
+                        <ion-row class="ion-justify-content-center ion-margin">
+                            <ion-button (click)="ingresar()" expand="full" shape="round">
+                                Ingresar
+                            </ion-button>
+                        </ion-row>
+
+                        <ion-row class="ion-justify-content-center">
+                            <a href="/login">¿Olvidaste la contraseña?</a>
+                        </ion-row>
+
+                    </ion-card-content>
+                </ion-card>
+
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>
