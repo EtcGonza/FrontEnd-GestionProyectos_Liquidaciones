@@ -28,6 +28,30 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Importaciones PrimeNg */
+
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeflex/primeflex.css";
+
+/* Estilos */
+
 ion-content {
     --background: #9bd7d5;
+}
+
+:root {
+    --surface-a: black !important;
+    --surface-b: black !important;
+    --surface-c: black !important;
+    --surface-d: black !important;
+    --surface-e: black !important;
+    --surface-f: black !important;
+    --text-color: black !important;
+    --text-color-secondary: black !important;
+    --primary-color: black !important;
+    --primary-color-text: black !important;
+    --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
