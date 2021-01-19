@@ -12,7 +12,8 @@ import { HeaderComponent } from '../components/header/header.component';
     PrimeNgModule
   ],
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    PrimeNgModule
   ]
 })
 

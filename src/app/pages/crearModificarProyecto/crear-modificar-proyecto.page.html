@@ -1,0 +1,63 @@
+<ion-content>
+
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="8">
+                <ion-card>
+                    <ion-card-header class="ion-text-center ion-margin">
+                        <ion-card-title *ngIf="!modificandoProyecto">Crear Proyecto - {{formulario.value.nombre}}</ion-card-title>
+
+                        <div *ngIf="modificandoProyecto">
+                            <ion-card-title>Modificar Proyecto '{{miProyecto.nombre}}'</ion-card-title>
+                            <ion-card-subtitle class="ion-margin-top">Fecha creación
+                                <p-tag styleClass="p-mr-2" icon="pi pi-calendar" severity="success" [value]="fechaInicioFormateada"></p-tag>
+                            </ion-card-subtitle>
+                        </div>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <ion-grid>
+                            <form [formGroup]="formulario">
+
+                                <ion-row class="ion-justify-content-center ion-align-items-start ion-margin-bottom">
+                                    <ion-col>
+                                        <span class="p-float-label">
+                                            <input id="float-input" type="text" pInputText formControlName="nombre"> 
+                                            <label for="float-input">Nombre del proyecto</label>
+                                        </span>
+                                    </ion-col>
+
+                                    <ion-col>
+                                        <p-dropdown required="true" [options]="estadosProyecto" formControlName="estado" baseZIndex="99999"></p-dropdown>
+                                    </ion-col>
+
+                                    <ion-col>
+                                        <p-dropdown required="true" [options]="clientes" optionLabel="nombre" placeholder="Seleccione un cliente" formControlName="cliente" baseZIndex="99999"></p-dropdown>
+                                    </ion-col>
+                                </ion-row>
+
+                                <ion-row class="ion-justify-content-center">
+                                    <ion-col size="12">
+                                        <span class="p-float-label">
+                                            <textarea rows="5" id="textDescripcion" pInputTextarea formControlName="descripcion"></textarea>
+                                            <label for="textDescripcion">Descripción</label>
+                                        </span>
+                                    </ion-col>
+                                </ion-row>
+                            </form>
+
+                            <ion-row class="ion-justify-content-start">
+                                <ion-col size="3">
+                                    <button pButton pRipple type="button" icon="pi pi-save" label="Guardar proyecto" (click)="guardarProyecto()" class="p-button-raised p-button-secondary"></button>
+                                </ion-col>
+                                <ion-col size="3">
+                                    <button pButton pRipple type="button" icon="pi pi-arrow-circle-left" label="Volver" (click)="volver()" class="p-button-outlined p-button-secondary"></button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

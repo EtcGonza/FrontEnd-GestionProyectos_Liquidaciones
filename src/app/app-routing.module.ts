@@ -11,10 +11,19 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'crearModificarProyecto',
+    loadChildren: () => import('./pages/crearModificarProyecto/crear-modificar-proyecto.module').then( m => m.CrearModificarProyectoPageModule)
+  },
+  {
+    path: 'gestionarProyectos',
+    loadChildren: () => import('./pages/gestionar-proyectos/gestionar-proyectos.module').then( m => m.GestionarProyectosPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+
 ];
 
 @NgModule({

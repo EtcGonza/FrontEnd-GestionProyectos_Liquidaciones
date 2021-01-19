@@ -42,6 +42,11 @@ ion-content {
     --background: #9bd7d5;
 }
 
+// Agrego espacios entre las cards de ionic
+ion-card {
+    margin: 2.2em;
+}
+
 :root {
     --surface-a: black !important;
     --surface-b: black !important;

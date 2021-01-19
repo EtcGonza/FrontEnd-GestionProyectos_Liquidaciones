@@ -11,11 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { MyComponentsModule } from './modules/my-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, MyComponentsModule, BrowserAnimationsModule],
+  imports: [BrowserModule,
+     IonicModule.forRoot(),
+     AppRoutingModule,
+     HttpClientModule,
+     MyComponentsModule,
+     IonicStorageModule.forRoot(),
+     BrowserAnimationsModule],
   providers: [
     StatusBar,
     SplashScreen,
